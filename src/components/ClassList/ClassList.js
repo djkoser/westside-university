@@ -25,10 +25,13 @@ export default class ClassList extends Component {
 
     ))
     return (
-      <div className="box">
-        <h1>{this.props.match.params.class}</h1>
-        <h2>ClassList:</h2>
-        {studentList}
+      <div>
+        <svg onClick={() => this.props.history.goBack()} className="arrow" width='50px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none"><path d="M3 12l7-9v4.99L21 8v8H10v5l-7-9z" stroke="#626262" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></g><rect x="0" y="0" width="24" height="24" fill="rgba(0, 0, 0, 0)" /></svg>
+        <div className="box">
+          <h1>{this.props.match.params.class}</h1>
+          <h2>ClassList:</h2>
+          {studentList}
+        </div>
       </div>
     )
   }
